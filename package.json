@@ -4,16 +4,21 @@
   "main": "lib/rematch-observable.cjs.js",
   "module": "lib/rematch-observable.esm.js",
   "browser": "lib/rematch-observable.umd.js",
-  "typings": "lib/index.d.ts",
+  "typings": "src/typings/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
   "peerDependencies": {
+    "redux": ">=4.0.4",
     "@rematch/core": ">=1.1.0"
   },
   "dependencies": {
     "redux-observable": "^1.2.0"
   },
   "devDependencies": {
+    "@rematch/core": "1.2.0",
     "@types/jest": "24.0.18",
-    "@types/ms": "0.7.30",
     "husky": "3.0.1",
     "jest": "24.9.0",
     "np": "5.0.3",

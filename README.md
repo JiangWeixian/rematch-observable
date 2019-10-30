@@ -1,11 +1,11 @@
-<h1 align="center">rematch-observable</h1>
+<h1>rematch-observable</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/jiangweixian/rematch-observable?label=rematch-observable&logo=npm&style=for-the-badge" />
   <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" />
   </a>
   <a href="https://twitter.com/jiangweixian" target="_blank">
-    <img alt="Twitter: jiangweixian" src="https://img.shields.io/twitter/follow/jiangweixian.svg?style=social" />
+    <img alt="Twitter: jiangweixian" src="https://img.shields.io/twitter/follow/jiangweixian.svg?style=for-the-badge" />
   </a>
 </p>
 

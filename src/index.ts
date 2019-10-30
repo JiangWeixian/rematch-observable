@@ -1,8 +1,29 @@
-import ms from 'ms';
-import lunchtime from './lunchtime.js';
-import millisecondsUntil from './millisecondsUntil.js';
+import { combineEpics, createEpicMiddleware, Epic } from 'redux-observable'
+import { Plugin } from '@rematch/core'
+import { createStore, applyMiddleware, compose, StoreCreator } from 'redux'
 
-export default function howLongUntilLunch(hours: number = 12, minutes: number = 30): string {
-	const millisecondsUntilLunchTime = millisecondsUntil(lunchtime(hours, minutes));
-	return ms(millisecondsUntilLunchTime, { long: true });
+const createRematchObservable = ({ epics }: { epics: { [key: string]: Epic } }): Plugin => {
+  const epic = combineEpics(...Object.values(epics))
+  const epicMiddleware = createEpicMiddleware()
+  return {
+    config: {
+      redux: {
+        createStore: ((reducers: any, initialState: any, enhancer: any) => {
+          return createStore(
+            reducers,
+            initialState,
+            compose(
+              applyMiddleware(...[epicMiddleware]),
+              enhancer,
+            ),
+          )
+        }) as StoreCreator,
+      },
+    },
+    onStoreCreated() {
+      epicMiddleware.run(epic)
+    },
+  }
 }
+
+export default createRematchObservable
