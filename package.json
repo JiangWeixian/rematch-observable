@@ -1,13 +1,14 @@
 {
-  "name": "@aiou/rollup-template",
-  "version": "1.5.1",
-  "main": "lib/how-long-till-lunch.cjs.js",
-  "module": "lib/how-long-till-lunch.esm.js",
-  "browser": "lib/how-long-till-lunch.umd.js",
+  "name": "rematch-observable",
+  "version": "0.0.0",
+  "main": "lib/rematch-observable.cjs.js",
+  "module": "lib/rematch-observable.esm.js",
+  "browser": "lib/rematch-observable.umd.js",
   "typings": "lib/index.d.ts",
-  "dependencies": {
-    "ms": "2.1.1"
+  "peerDependencies": {
+    "@rematch/core": ">=1.1.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.18",
     "@types/ms": "0.7.30",
