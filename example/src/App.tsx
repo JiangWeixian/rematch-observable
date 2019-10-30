@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-import { useIncrement } from './hooks/use-increment'
 import { Dispatch, RootState } from './store'
 
 const mapState = (state: RootState) => ({
@@ -21,7 +20,6 @@ type connectedProps = ReturnType<typeof mapState> & ReturnType<typeof mapDispatc
 type Props = connectedProps
 
 function Count(props: Props) {
-  const incrementTwoModels = useIncrement()
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <div style={{ width: 120 }}>
@@ -36,12 +34,6 @@ function Count(props: Props) {
         <button onClick={props.incrementSharks}>+1</button>
         <button onClick={props.incrementSharksAsync}>Async +1</button>
         <button onClick={props.incrementSharksAsync2}>Async +2</button>
-      </div>
-      <div style={{ width: 200 }}>
-        <h3>Sharks and Dolphins</h3>
-        <h1>{props.sharks}</h1>
-        <h1>{props.dolphins}</h1>
-        <button onClick={incrementTwoModels}>+1</button>
       </div>
     </div>
   )
