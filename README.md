@@ -18,7 +18,7 @@ npm install rematch-observable --save
 ```
 
 ## Usage
-> see more in [example](/example)
+> see more in [example](https://github.com/JiangWeixian/rematch-observable/tree/master/example)
 
 ```tsx
 // import
