@@ -8,12 +8,12 @@ export const getDispatchers = (models: Models): any => {
       dispatchers[key] = {}
     }
     if (model.reducers) {
-      Object.keys(model.reducers).forEach(reduerKey => {
-        const actionType = `${key}/${reduerKey}`
-        dispatchers[key][reduerKey] = (payload: any, meta: any) => {
+      Object.keys(model.reducers).forEach(reducerKey => {
+        const actionType = `${key}/${reducerKey}`
+        dispatchers[key][reducerKey] = (payload: any, meta: any) => {
           return { type: actionType, payload, meta }
         }
-        dispatchers[key][reduerKey].type = actionType
+        dispatchers[key][reducerKey].type = actionType
       })
     }
     if (model.effects) {
