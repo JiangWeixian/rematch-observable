@@ -1,6 +1,6 @@
 {
   "name": "rematch-observable",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "lib/rematch-observable.cjs.js",
   "module": "lib/rematch-observable.esm.js",
   "browser": "lib/rematch-observable.umd.js",
