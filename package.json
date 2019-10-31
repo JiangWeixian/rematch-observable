@@ -9,6 +9,16 @@
     "lib",
     "src"
   ],
+  "keywords": [
+    "redux",
+    "rxjs",
+    "redux-observable",
+    "rematch-observable",
+    "rematch"
+  ],
+  "repository": {
+    "url": "https://github.com/JiangWeixian/rematch-observable"
+  },
   "peerDependencies": {
     "redux": ">=4.0.4",
     "rxjs": ">=6.0.0-beta.0 <7",
