@@ -1,11 +1,14 @@
-import { Epic } from 'redux-observable'
-import { filter, mapTo } from 'rxjs/operators'
+import { RematchEpic, ofType } from 'rematch-observable'
+import { mapTo } from 'rxjs/operators'
+import { RootState, Dependencies } from 'src/store'
 
-export const sharkEpics: Epic<any, any, any> = (action$, state$) => {
+export const sharkEpics: RematchEpic<RootState, Dependencies> = (
+  action$,
+  state$,
+  { dispatchers },
+) => {
   return action$.pipe(
-    filter(v => {
-      return v.type === 'dolphins/increment'
-    }),
-    mapTo({ type: 'sharks/increment', payload: 1 }),
+    ofType(dispatchers.dolphins.increment, dispatchers.dolphins.incrementAsync),
+    mapTo(dispatchers.sharks.increment(1)),
   )
 }
