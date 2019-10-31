@@ -11,6 +11,47 @@
 
 > redux-observable in rematch
 
+## Setup
+
+```bash
+npm install rematch-observable --save
+```
+
+## Usage
+> see more in [example](/example)
+
+```tsx
+// import
+import { init, RematchRootState, RematchDispatch } from '@rematch/core'
+
+// setup plugin
+const rematchObservable = createRematchObservable({ epics: { sharkEpics }, models })
+
+export const store = init({
+  models,
+  plugins: [rematchObservable],
+})
+
+// types
+export type Dependencies = RematchObserverDependencies<Dispatch>
+
+// epics
+import { RematchEpic, ofType } from 'rematch-observable'
+import { mapTo } from 'rxjs/operators'
+import { RootState, Dependencies } from 'src/store'
+
+export const sharkEpics: RematchEpic<RootState, Dependencies> = (
+  action$,
+  state$,
+  { dispatchers },
+) => {
+  return action$.pipe(
+    ofType(dispatchers.dolphins.increment, dispatchers.dolphins.incrementAsync),
+    mapTo(dispatchers.sharks.increment(1)),
+  )
+}
+```
+
 ## Author
 
 👤 **JiangWeixian**
