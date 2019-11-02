@@ -50,7 +50,7 @@
   "scripts": {
     "build": "rimraf lib && rollup -c",
     "dev": "rollup -c -w",
-    "test": "ts-node test/test.ts",
+    "test": "jest",
     "pretest": "npm run build",
     "update": "npm update && npm update --save-dev",
     "check": "npm outdated && npm outdated --save-dev",
