@@ -1,9 +1,9 @@
-export const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+export const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export const dolphins = {
   state: 1,
   reducers: {
-    increment: state => state + 1,
+    increment: (state) => state + 1,
   },
   effects: {
     async incrementAsync() {

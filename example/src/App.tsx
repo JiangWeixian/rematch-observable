@@ -39,7 +39,4 @@ function Count(props: Props) {
   )
 }
 
-export default connect(
-  mapState,
-  mapDispatch,
-)(Count)
+export default connect(mapState, mapDispatch)(Count)

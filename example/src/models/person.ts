@@ -5,7 +5,7 @@ export type PesonState = number
 export const person = {
   state: 0,
   reducers: {
-    increment: state => state + 1,
+    increment: (state) => state + 1,
   },
   effects: {
     async incrementAsync() {

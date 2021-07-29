@@ -16,21 +16,21 @@ describe('test utils getDispatchers', () => {
   })
 
   test('value of dispatchers should be function', () => {
-    Object.keys(dispatchers.sharks).forEach(key => {
+    Object.keys(dispatchers.sharks).forEach((key) => {
       expect(typeof dispatchers.sharks[key]).toBe('function')
     })
 
-    Object.keys(dispatchers.dolphins).forEach(key => {
+    Object.keys(dispatchers.dolphins).forEach((key) => {
       expect(typeof dispatchers.dolphins[key]).toBe('function')
     })
   })
 
   test('item in dispatchers has propety type', () => {
-    Object.keys(dispatchers.sharks).forEach(key => {
+    Object.keys(dispatchers.sharks).forEach((key) => {
       expect(dispatchers.sharks[key].type).toBe(`sharks/${key}`)
     })
 
-    Object.keys(dispatchers.dolphins).forEach(key => {
+    Object.keys(dispatchers.dolphins).forEach((key) => {
       expect(dispatchers.dolphins[key].type).toBe(`dolphins/${key}`)
     })
   })

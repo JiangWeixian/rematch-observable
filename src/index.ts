@@ -1,17 +1,17 @@
 import { combineEpics, createEpicMiddleware, Epic, ofType as rdxOfType } from 'redux-observable'
-import { Plugin, Models, RematchDispatcher, RematchDispatcherAsync } from '@rematch/core'
+import { Plugin, Models, RematchDispatcher, EffectRematchDispatcher } from '@rematch/core'
 import { createStore, applyMiddleware, compose, StoreCreator } from 'redux'
 
 import { getDispatchers } from './utils/getDispatchers'
 
 export const isActionOf = (dispatcher: { type: string }) => {
-  return (value: { type: string; payload: any; meta: any }, index: number) => {
+  return (value: { type: string; payload: any; meta: any }) => {
     return value && dispatcher.type && dispatcher.type === value.type
   }
 }
 
-export const ofType = (...dispatchers: (RematchDispatcher | RematchDispatcherAsync)[]) => {
-  const types = dispatchers.map(dispatcher => (dispatcher as any).type).filter(type => !!type)
+export const ofType = (...dispatchers: (RematchDispatcher | EffectRematchDispatcher)[]) => {
+  const types = dispatchers.map((dispatcher) => (dispatcher as any).type).filter((type) => !!type)
   return rdxOfType(...types)
 }
 
@@ -32,10 +32,7 @@ const createRematchObservable = ({
           return createStore(
             reducers,
             initialState,
-            compose(
-              applyMiddleware(...[epicMiddleware]),
-              enhancer,
-            ),
+            compose(applyMiddleware(...[epicMiddleware]), enhancer),
           )
         }) as StoreCreator,
       },

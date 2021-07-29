@@ -6,7 +6,7 @@ export const sharks = {
   state: 0,
   reducers: {
     increment: (state: SharksState, payload: number): SharksState => state + payload,
-    setLoading: (state: SharksState, payload: boolean) => state + 1,
+    setLoading: (state: SharksState, _payload: boolean) => state + 1,
   },
   effects: {
     async incrementAsync(payload: number) {
