@@ -10,21 +10,21 @@
     "test": "react-scripts-ts test --env=jsdom"
   },
   "dependencies": {
-    "@rematch/core": "1.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
-    "redux-observable": "^1.2.0",
+    "@rematch/core": "2.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux-observable": "^2.0.0",
     "rematch-observable": "file:..",
-    "rxjs": "^6.5.3"
+    "rxjs": "^7.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.8",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-redux": "^7.1.1",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.6",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
     "react-scripts-ts": "^3.1.0",
-    "typescript": "^3.5.3"
+    "typescript": "^4.3.5"
   }
 }
