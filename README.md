@@ -1,15 +1,17 @@
 <h1>rematch-observable</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/github/package-json/v/jiangweixian/rematch-observable?label=rematch-observable&logo=npm&style=for-the-badge" />
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/jiangweixian/rematch-observable?label=rematch-observable&logo=npm" />
   <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" />
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href="https://twitter.com/jiangweixian" target="_blank">
-    <img alt="Twitter: jiangweixian" src="https://img.shields.io/twitter/follow/jiangweixian.svg?style=for-the-badge" />
+    <img alt="Twitter: jiangweixian" src="https://img.shields.io/twitter/follow/jiangweixian.svg" />
   </a>
 </p>
 
 > redux-observable in rematch
+
+if you looking for **rematch@1.x**, please reference to [rematch-observable@0.x](https://github.com/JiangWeixian/rematch-observable/tree/v1.x)
 
 ## Setup
 
@@ -18,7 +20,7 @@ npm install rematch-observable --save
 ```
 
 ## Usage
-> see more in [example](https://github.com/JiangWeixian/rematch-observable/tree/master/example)
+*see more in [example](https://github.com/JiangWeixian/rematch-observable/tree/master/example)*
 
 ```tsx
 // import

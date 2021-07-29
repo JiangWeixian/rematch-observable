@@ -1,6 +1,6 @@
 {
   "name": "rematch-observable",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "keywords": [
     "redux",
     "rxjs",
@@ -8,12 +8,17 @@
     "rematch-observable",
     "rematch"
   ],
+  "homepage": "https://github.com/JiangWeixian/rematch-observable#README.md",
   "repository": {
     "url": "https://github.com/JiangWeixian/rematch-observable"
   },
+  "bugs": {
+    "url": "https://github.com/JiangWeixian/rematch-observable/issues",
+    "email": "jiangweixian1994@gmail.com"
+  },
+  "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "main": "lib/rematch-observable.cjs.js",
   "module": "lib/rematch-observable.esm.js",
@@ -24,10 +29,8 @@
     "dev": "rollup -c -w",
     "lint:fix": "eslint . --fix",
     "test": "jest",
-    "pretest": "npm run build",
-    "update": "npm update && npm update --save-dev",
-    "check": "npm outdated && npm outdated --save-dev",
-    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish --any-branch"
+    "pretest": "pnpm run build",
+    "prepublishOnly": "pnpm run build && np --no-cleanup --yolo --no-publish --any-branch"
   },
   "husky": {
     "hooks": {

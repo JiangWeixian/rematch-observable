@@ -24,7 +24,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-redux: 7.2.4_react-dom@17.0.2+react@17.0.2
   redux-observable: 2.0.0
-  rematch-observable: 0.1.1_@rematch+core@2.0.1+rxjs@7.3.0
+  rematch-observable: link:..
   rxjs: 7.3.0
 
 devDependencies:
@@ -6947,15 +6947,6 @@ packages:
       balanced-match: 1.0.2
     dev: true
 
-  /redux-observable/1.2.0_rxjs@7.3.0:
-    resolution: {integrity: sha512-yeR90RP2WzZzCxxnQPlh2uFzyfFLsfXu8ROh53jGDPXVqj71uNDMmvi/YKQkd9ofiVoO4OYb1snbowO49tCEMg==}
-    peerDependencies:
-      redux: '>=4 <5'
-      rxjs: '>=6.0.0-beta.0 <7'
-    dependencies:
-      rxjs: 7.3.0
-    dev: false
-
   /redux-observable/2.0.0:
     resolution: {integrity: sha512-FJz4rLXX+VmDDwZS/LpvQsKnSanDOe8UVjiLryx1g3seZiS69iLpMrcvXD5oFO7rtkPyRdo/FmTqldnT3X3m+w==}
     peerDependencies:
@@ -7049,18 +7040,6 @@ packages:
     resolution: {integrity: sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=}
     engines: {node: '>= 0.10'}
     dev: true
-
-  /rematch-observable/0.1.1_@rematch+core@2.0.1+rxjs@7.3.0:
-    resolution: {integrity: sha512-5MWklqBETzq3gwsDC/OyiW5gmDjmMLfzo0THl5kMbi5Q0m8gJ6CC1aO0LwYLsz456CGETiGSDknmpxM9+2J21w==}
-    peerDependencies:
-      '@rematch/core': '>=1.1.0'
-      redux: '>=4.0.4'
-      rxjs: '>=6.0.0-beta.0 <7'
-    dependencies:
-      '@rematch/core': 2.0.1
-      redux-observable: 1.2.0_rxjs@7.3.0
-      rxjs: 7.3.0
-    dev: false
 
   /remove-trailing-separator/1.1.0:
     resolution: {integrity: sha1-wkvOKig62tW8P1jg1IJJuSN52O8=}
