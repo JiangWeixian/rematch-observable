@@ -11,8 +11,10 @@ export const isActionOf = (dispatcher: { type: string }) => {
 }
 
 export const ofType = (...dispatchers: (RematchDispatcher | EffectRematchDispatcher)[]) => {
-  const types = dispatchers.map((dispatcher) => (dispatcher as any).type).filter((type) => !!type)
-  return rdxOfType(...types)
+  const [arg, ...rest] = dispatchers
+    .map((dispatcher) => (dispatcher as any).type)
+    .filter((type) => !!type)
+  return rdxOfType(arg, ...rest)
 }
 
 const createRematchObservable = ({

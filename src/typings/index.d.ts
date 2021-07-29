@@ -1,7 +1,7 @@
 import { Epic, ofType as rdxOfType } from 'redux-observable'
 import { Plugin, Action, Models, EffectRematchDispatcher, RematchDispatcher } from '@rematch/core'
 
-export default function createReamtchObservable(params: {
+export default function createRematchObservable(params: {
   epics: { [key: string]: Epic }
   models: Models
 }): Plugin
