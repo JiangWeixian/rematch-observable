@@ -3,7 +3,11 @@ import { mapTo } from 'rxjs/operators'
 import createRematchObservable, { ofType } from '../src'
 import { sharks, dolphins, delay } from './utils'
 
-const sharkEpics = (action$, state$, { dispatchers }) => {
+const sharkEpics = (
+  action$: any,
+  _state$: any,
+  { dispatchers }: { dispatchers: Record<string, any> },
+) => {
   return action$.pipe(
     ofType(dispatchers.dolphins.increment, dispatchers.dolphins.incrementAsync),
     mapTo(dispatchers.sharks.increment(1)),

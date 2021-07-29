@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose, StoreCreator } from 'redux'
 import { getDispatchers } from './utils/getDispatchers'
 
 export const isActionOf = (dispatcher: { type: string }) => {
-  return (value: { type: string; payload: any; meta: any }) => {
+  return (value: { type: string; payload: any; meta: any }, _index?: number) => {
     return value && dispatcher.type && dispatcher.type === value.type
   }
 }
