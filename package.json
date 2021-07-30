@@ -41,6 +41,9 @@
       "eslint --fix"
     ]
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "peerDependencies": {
     "@rematch/core": ">=1.1.0",
     "redux": ">=4.0.4",
